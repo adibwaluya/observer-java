@@ -23,9 +23,10 @@ public class Supermarket implements Store {
                     + "New Cart Found! Brand: " + shoppingCart.getBrand() + "\n"
                     + "Location: " + shoppingCart.getLocation() + "\n"
                     + "Cart ID: " + shoppingCart.getID() + "\n");
-            //shoppingCart = new ShoppingCart(ID, brand, location);
-            //carts.add(shoppingCart);
-            //System.out.println("ID: " +  ID + ", brand: " + brand + ", location: " + location);
+        }
+        if(shoppingCart.getBrand() == this.brand){
+            carts.add(shoppingCart);
+            System.out.println("Saved Carts for " + storeName + " are: " + carts + "\n");
         }
     }
 }
