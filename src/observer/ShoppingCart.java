@@ -44,12 +44,12 @@ public class ShoppingCart implements Subject {
     }
 
     @Override
-    public void registerStore(Store store) {
+    public void registerShoppingCart(Store store) {
         stores.add(store);
     }
 
     @Override
-    public void removeStore(Store store) {
+    public void removeShoppingCart(Store store) {
         stores.remove(store);
     }
 

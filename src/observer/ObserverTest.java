@@ -9,7 +9,7 @@ public class ObserverTest {
         ShoppingCart cartOne = new ShoppingCart(1, "Tierpark", "Lidl");
         ShoppingCart cartTwo = new ShoppingCart(2, "Aristo", "Edeka");
 
-        cartOne.registerStore(edekaStore);
-        cartTwo.registerStore(lidlStore);
+        cartOne.registerShoppingCart(edekaStore);
+        cartTwo.registerShoppingCart(lidlStore);
     }
 }
