@@ -11,7 +11,7 @@ public class ObserverTest {
         Supermarket edeka1 = new Supermarket("Edeka", "Edeka Fromm");
         Supermarket edeka2 = new Supermarket("Edeka", "Edeka Karl");
         Supermarket lidl = new Supermarket("Lidl", "Lidl");
-        Supermarket aldi = new Supermarket("Alde", "Aldi");
+        Supermarket aldi = new Supermarket("Aldi", "Aldi");
         Supermarket penny = new Supermarket("Penny", "Penny");
         Supermarket kaufland = new Supermarket("Kaufland", "Kaufland");
         Supermarket bauhaus = new Supermarket("Bauhaus", "Bauhaus");
