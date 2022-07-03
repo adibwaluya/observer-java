@@ -1,8 +1,8 @@
 package observer.interfaces;
-
+//Observer
 import observer.ShoppingCart;
 
 public interface Store {
-    public void updateCarts(int ID, String brand, String location);
 
+    void updateCarts(ShoppingCart shoppingCart);
 }

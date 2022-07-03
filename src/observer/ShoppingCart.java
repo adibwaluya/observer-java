@@ -1,16 +1,16 @@
 package observer;
 
-import observer.interfaces.Store;
-import observer.interfaces.Subject;
+import observer.interfaces.Cart;
 
 import java.util.ArrayList;
 
-public class ShoppingCart implements Subject {
+public class ShoppingCart implements Cart {
     private int ID;
     private String location;
-    private String brand;
 
-    private ArrayList<Store> stores = new ArrayList<Store>();
+    private String brand; //Possible brands: Lidl, Edeka, Kaufland, Penny, Bauhaus, Unknown
+
+    private ArrayList<Supermarket> stores = new ArrayList<Supermarket>();
 
 
     public int getID() {
@@ -41,23 +41,23 @@ public class ShoppingCart implements Subject {
         this.ID = ID;
         this.location = location;
         this.brand = brand;
+        notifyStores();
     }
 
     @Override
-    public void registerStore(Store store) {
-        stores.add(store);
+    public void registerStore(Supermarket supermarket) {
+        stores.add(supermarket);
     }
 
     @Override
-    public void removeStore(Store store) {
-        stores.remove(store);
+    public void removeStore(Supermarket supermarket) {
+        stores.remove(supermarket);
     }
 
     @Override
     public void notifyStores() {
-        for (Store store: stores) {
-            store.updateCarts(ID, location, brand);
-        }
+        for(Supermarket s : stores)
+            s.updateCarts(this);
     }
 }
 
